@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Header, Footer } from './components';
-import { About, Home, NotFound } from './pages';
+import { About, Home, NotFound, CitiesList } from './pages';
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,6 +32,9 @@ class App extends Component {
           </Route>
           <Route path="/about"> 
             <About />
+          </Route>
+          <Route path="/list"> 
+            <CitiesList selectedCity={this.state.selectedCity} />
           </Route>
           <Route path="*">
             <NotFound />
